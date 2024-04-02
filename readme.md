@@ -53,3 +53,9 @@ and  . for current folder
 default address of nginx config file /etc/nginx/conf.d/default.conf
 create a file and folder structure to mirror this config path
 
+#add composer
+allow superuser setting an environment variable
+```ENV COMPOSER_ALLOW_SUPERUSER=1```
+create a multystage Dockerfile using COPY to copy the composer binaries
+```COPY --from=composer:2.4 /usr/bin/composer /usr/bin/composer
+
