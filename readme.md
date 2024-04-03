@@ -60,3 +60,18 @@ allow superuser setting an environment variable
 create a multystage Dockerfile using COPY to copy the composer binaries
 ```COPY --from=composer:2.4 /usr/bin/composer /usr/bin/composer
 
+
+#creating a docker dev 
+#customizing dev file
+
+remove the vendor folder because it's not required
+
+#customizing prod file
+The production will miss the volumes
+- we don't need to expose the ports for the database
+- move the environment to envirnonment variables
+- remove the volumes
+- create an nginx dockerfile for the production in the nginx folder
+
+
+
